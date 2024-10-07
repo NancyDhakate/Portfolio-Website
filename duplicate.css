@@ -654,24 +654,21 @@ h3.my-profession {
   height: 50px;
   padding: 0 50px;
 }
-/* Responsive adjustments */
-@media (max-width: 991px) {
-  /* Show nav-toggler button */
-  .aside .nav-toggler {
-    display: flex; /* Now visible on smaller screens */
-  }
 
-  /* Hide the aside menu by default on smaller screens */
+@media (max-width: 768px) {
   .aside {
-    left: -270px; /* Hide aside menu */
+    left: -270px;
   }
-
-  /* Adjust main content padding when aside is hidden */
   .main-content {
-    padding-left: 0; /* No padding when aside is hidden */
+    padding-left: 0;
   }
+  .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
+  }
+}
 
-  /* Contact, portfolio, and service items adjust */
+@media (max-width: 991px) {
   .contact .contact-info-item,
   .portfolio .portfolio-item,
   .service .service-item {
@@ -679,25 +676,24 @@ h3.my-profession {
     max-width: 50%;
   }
 
-  .home .home-info,
-  .about .about-content .personal-info,
-  .about .about-content .skills {
-    flex: 0 0 100%; /* Make these full width on smaller screens */
+  .home .home-info {
+    flex: 0 0 100%;
     max-width: 100%;
   }
-
-  /* Adjust info-item spans for better layout */
-  .about .about-content .personal-info .info-item p span {
-    display: block; /* Separate spans into blocks for better readability */
-    margin-left: 0;
+  .home .home-img {
+    display: none;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .contact .contact-form .col-6,
   .contact .contact-info-item,
-  .portfolio .portfolio-item,
-  .service .service-item {
-    flex: 0 0 100%; /* Full width for even smaller screens */
+  .portfolio .portfolio-item .service .service-item,
+  .about .about-content .experience,
+  .about .about-content .education,
+  .about .about-content .skills,
+  .about .about-content .personal-info {
+    flex: 0 0 100%;
     max-width: 100%;
   }
 }
