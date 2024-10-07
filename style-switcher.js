@@ -1,16 +1,7 @@
-/*---- toggle style switcher ---- 
+/*---- toggle style switcher ---- */
 const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
 styleSwitcherToggle.addEventListener("click", () => {
   document.querySelector(".style-switcher").classList.toggle("open");
-});*/
-const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
-styleSwitcherToggle.addEventListener("click", () => {
-  document.querySelector(".style-switcher").classList.toggle("open");
-  if (document.querySelector(".style-switcher").classList.contains("open")) {
-    document.querySelector(".style-switcher").style.left = "0";
-  } else {
-    document.querySelector(".style-switcher").style.left = "-270px";
-  }
 });
 
 //hide style switcher on scroll
