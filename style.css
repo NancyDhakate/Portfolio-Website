@@ -358,6 +358,28 @@ h3.my-profession {
   margin-left: 4px;
   display: inline-block;
 }
+/*  Changes */
+/* Add this to your existing CSS */
+
+/* Ensure info-items stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .about .about-content .personal-info .info-item {
+    flex: 0 0 100%; /* Make each info item take the full width */
+    max-width: 100%;
+  }
+
+  .about .about-content .personal-info .info-item p {
+    word-wrap: break-word; /* Break long words/links to avoid overflow */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .about .about-content .personal-info .info-item a {
+    display: block; /* Make the link take full width to avoid overlap */
+    overflow-wrap: anywhere; /* Breaks long links if they overflow */
+  }
+}
+
+/*  Changes */
 .about .about-content .personal-info .buttons {
   margin-top: 30px;
 }
